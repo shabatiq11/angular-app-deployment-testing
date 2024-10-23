@@ -1,0 +1,9 @@
+@if(signalArr().length > 0) {
+    <div class="flex flex-wrap items-start justify-center">
+        @for(item of signalArr();track item) {
+            <app-user [product]="item" />
+        }
+    </div>
+} @else {
+    <div class="text-center text-gray-400 text-5xl">Loading...</div>
+}

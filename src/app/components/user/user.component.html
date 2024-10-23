@@ -1,0 +1,17 @@
+<mat-card style="border: 1px solid gray; border-radius: 5px;" class="max-w-[400px] m-5">
+    <mat-card-header>
+      <div mat-card-avatar class="bg-cover">
+        <img class="h-10 w-10 object-cover rounded-full" src="{{ product.image }}" />
+      </div>
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="w-[400px] h-[320px] overflow-hidden" src="{{ product.image }}" alt="{{ product.title }}">
+    <mat-card-content>
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>

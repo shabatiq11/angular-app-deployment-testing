@@ -1,0 +1,10 @@
+<nav class="bg-gray-500">
+    <div class="max-w-[1200px] mx-auto h-20 flex items-center justify-between text-white">
+        <div [routerLink]="['/']" class="text-4xl font-bold cursor-pointer">LOGO</div>
+        <ul class="flex items-center gap-4">
+            @for(item of signalArr(); track item) { 
+                <li [routerLink]="item.link" class="cursor-pointer">{{ item.name }}</li> 
+            }
+        </ul>
+    </div>
+</nav>
