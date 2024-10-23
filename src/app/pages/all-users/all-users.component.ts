@@ -24,16 +24,10 @@ interface ProductDataType {
 })
 export class AllUsersComponent implements OnInit {
 
-  
-  
-
-
   signalArr = signal<ProductDataType[]>([])
   constructor(private apiService: ApiService<ProductDataType[]>){}
 
   ngOnInit() {
-    this.apiService.getAll().subscribe(data => {
-      this.signalArr.set(data)
-    })
+    this.apiService.getAll().subscribe(data => this.signalArr.set(data))
   }
 }

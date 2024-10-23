@@ -26,17 +26,5 @@
         ]
       }
     }
-  ],
-  "dataGroups": [
-    {
-      "name": "fake-api",
-      "urls": ["https://fakestoreapi.com/products"],
-      "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 20,
-        "maxAge": "1h",
-        "timeout": "5s"
-      }
-    }
   ]
 }

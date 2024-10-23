@@ -10,34 +10,27 @@ export class ApiService<T> {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<T>{
-    if ('caches' in window) {
-
-    //   console.log('CACH API ENABLED IN BROWSER');
-    //   caches.open('ngsw:/:1:data:dynamic:mission-api:cache').then(cache => {
-    //     cache.match('https://fakestoreapi.com/products').then(res => {
-    //       return res
-    //     })
-    //   });
-    // }
-    // return this.http.get<T>('https://fakestoreapi.com/products')
 
     //if ('caches' in window) {
-    //   return new Observable<T>((observer) => {
-    //     caches.open('ngsw:/:1:data:dynamic:fake-api:cache').then(cache => {
-    //       cache.match('https://fakestoreapi.com/products').then(response => {
-    //         if (response) {
-    //           response.json().then(data => {
-    //             // Emit cached data
-    //             observer.next(data);
-    //             observer.complete();
-    //           })
-    //         }
-    //       })
-    //     });
-    //   });
-    // } else {
-      // If Cache API is not available, fall back to HTTP request
-    }
+      // return new Observable<T>((observer) => {
+        // caches.open('ngsw:/:1:data:dynamic:fake-api:cache').then(cache => {
+          
+        // })
+      //     //if(cache && Object.entries(cache).length > 0) {
+      //       cache.match('https://fakestoreapi.com/products').then(r => {
+      //         if (r) {
+      //           console.log(r)
+      //           r.json().then(data => {
+      //             observer.next(data);
+      //             observer.complete();
+      //           })
+      //         }
+      //       })
+      //     //} else this.http.get<T>('https://fakestoreapi.com/products')
+          
+      //   })
+      // });
+    //}
     return this.http.get<T>('https://fakestoreapi.com/products');
   }
 }
